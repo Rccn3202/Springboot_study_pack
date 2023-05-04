@@ -1,0 +1,29 @@
+package com.web.common;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBCon {
+
+
+public static Connection getCon() {
+	Connection con;
+	try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+	} catch (ClassNotFoundException e) {
+		e.printStackTrace();
+	}
+
+	String url = "jdbc:mysql://localhost:3305/nothing";
+	String id = "root";
+	String pwd = "1234";
+
+	try {
+		con = DriverManager.getConnection(url,id,pwd);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} //전화 거는 것(네트워크 이용). 예외처리 필요.
+}
+}
