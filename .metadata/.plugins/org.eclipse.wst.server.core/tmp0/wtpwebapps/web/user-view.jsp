@@ -25,6 +25,7 @@ if(rs.next()){
 아이디 : <%=rs.getString("UI_ID") %><br>
 비번 : <%=rs.getString("UI_PWD") %><br>
 등록일 : <%=rs.getString("UI_DATE") %><br>
+<button onclick="location.href='/user-update.jsp?uiNum=<%=rs.getInt("UI_NUM")%>'">수정</button>
 <% 
 }
 %>
