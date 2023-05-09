@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<script>
+<%
+String uiId=request.getParameter("uiId");
+String uiPwd=request.getParameter("uiPwd");
+String uiName=request.getParameter("uiName");
+
+Connection con = DBCon.getCon();
+String sql = "INSERT INTO USER_INFO(UI_ID, UI_PWD, UI_NAME)";
+sql += "values(?,?,?)";
+PreparedStatement pstmt = con.prepareStatement(sql);
+pstmt.setString(1,uiId);
+pstmt.setString(2,uiId);
+pstmt.setString(3,uiId);
+int result = pstmt.executeUpdate();
+if(result==1){
+%>
+alert('유저 등록 ㅇ');
+location.href='/users.jsp';
+<%
+}else{
+%>
+alert('유저등록 ㄴㄴ');
+location.href='/users.jsp';
+<%
+}
+%>
+
+</script>

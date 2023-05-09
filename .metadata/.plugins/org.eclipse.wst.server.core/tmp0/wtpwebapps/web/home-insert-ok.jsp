@@ -1,0 +1,38 @@
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="com.web.common.DBCon"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<script>
+<%
+String uiId=request.getParameter("uiId");
+String uiPwd=request.getParameter("uiPwd");
+String uiName=request.getParameter("uiName");
+
+Connection con = DBCon.getCon();
+String sql = "INSERT INTO USER_INFO(UI_ID, UI_PWD, UI_NAME, UI_EMAIL, UI_ADDRESS,UI_BIRTH,UI_TRANS)";
+sql += "values(?,?,?)";
+PreparedStatement pstmt = con.prepareStatement(sql);
+pstmt.setString(1,uiId);
+pstmt.setString(2,uiId);
+pstmt.setString(3,uiId);
+pstmt.setString(4,uiId);
+pstmt.setString(5,uiId);
+pstmt.setString(6,uiId);
+pstmt.setString(7,uiId);
+
+int result = pstmt.executeUpdate();
+if(result==1){
+%>
+alert('유저 등록 ㅇ');
+location.href='/homes.jsp';
+<%
+}else{
+%>
+alert('유저등록 ㄴㄴ');
+location.href='/homes.jsp';
+<%
+}
+%>
+
+</script>

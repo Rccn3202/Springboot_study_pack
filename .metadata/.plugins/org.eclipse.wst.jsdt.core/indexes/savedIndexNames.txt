@@ -1,8 +1,7 @@
-INDEX VERSION 1.4+C:\webStudyB\SpringMVC_study\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2773078306.index
-158041389.index
+INDEX VERSION 1.4+C:\JAVA study\Springboot_study_pack\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+545776671.index
+2724650961.index
+3082047851.index
 4069684495.index
-379680051.index
-1649217051.index
 1243057733.index
-464614829.index
+2540310925.index
